@@ -1,0 +1,8 @@
+1、预训练文件权重为swin_tiny_patch4_window7_224.pth，在swin-transformer-train的文件夹中
+2、修改路径，在main.py文件夹中（包括data-path、resume——这个就是预训练模型的路径）
+3、配置configuration,找到vscode/pycharm的configuration配置入口
+	①--cfg config/swin_tiny_patch4_window7_224.yaml
+	②--data-path imagenet  (这个是数据集的路径，我放在了同一目录的imagenet文件夹)
+	③--local_rank 0
+	④--batch_size 32（可以适当修改）
+4、在config.py文件中修改num_worker=8（即可以支持8个线程一起运行，可适当修改）
